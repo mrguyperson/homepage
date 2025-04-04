@@ -2,13 +2,14 @@
 name: Publish Website
 
 # Allow one concurrent deployment
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
+# concurrency:
+#   group: "pages"
+#   cancel-in-progress: true
 
 on:
+  workflow_dispatch:
   push:
-    branches: ['main']
+    branches: main
 
 jobs:
   quarto-publish:
@@ -16,10 +17,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Install Quarto
         uses: quarto-dev/quarto-actions/setup@v2      
-      - name: Publish to GitHub Pages
+      - name: Render and publish to quarto pub
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: quarto-pub
