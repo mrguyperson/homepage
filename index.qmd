@@ -4,7 +4,7 @@ subtitle: "Data Analyst | Ecologist"
 image: profile.jpg
 about: # https://quarto.org/docs/websites/website-about.html
   template: jolla
-  image-shape: round
+  image-shape: rounded
   image-width: 10em
   links:
     - icon: github
