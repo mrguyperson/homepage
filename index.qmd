@@ -5,7 +5,7 @@ image: profile.jpg
 about: # https://quarto.org/docs/websites/website-about.html
   template: jolla
   image-shape: rounded
-  image-width: 10em
+  # image-width: 10em
   links:
     - icon: github
       text: Github
