@@ -33,5 +33,5 @@ format:
     # linkcolor: "black"
     # mainfont: "monospace"
     fontsize: 18px
-    theme: [darkly, styles.scss]
+    theme: [darkly]
     # theme: [darkly]
