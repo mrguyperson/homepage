@@ -1,11 +1,12 @@
 ---
 title: "Theodore Hermann"
-subtitle: "Data Analyst | Research Scientist"
+subtitle: "Data Analyst | Ecologist"
 # `profile.jpg` photo by Jan Tinneberg on https://unsplash.com
 image: profile.jpg
 about: # https://quarto.org/docs/websites/website-about.html
-  template: trestles
-  image-shape: rounded
+  template: jolla
+  image-shape: round
+  image-width: 10em
   links:
     - icon: github
       text: Github
@@ -17,8 +18,8 @@ about: # https://quarto.org/docs/websites/website-about.html
       text: Google Scholar
       href: https://scholar.google.com/citations?user=rydWidMAAAAJ&hl=
 ---
-
-{{< lipsum 1 >}}
+<!-- Get in touch! -->
+<!-- {{< lipsum 1 >}}
 
 ## Education
 
@@ -36,4 +37,4 @@ Bachelor in Earth Science \| Aug 2005--May 2009
 
 ## Experience
 
-Workplace \| Job title \| April 20XX - present
+Workplace \| Job title \| April 20XX - present -->

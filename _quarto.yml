@@ -6,15 +6,32 @@ website:
   open-graph: true # https://quarto.org/docs/websites/website-tools.html#open-graph
   page-footer: "Made with ❤️ and Quarto"
   navbar:
-    right:
-      - text: Home
+    title: Theodore Hermann
+    left:
+      - text: Contact
         href: index.qmd
+      - text: CV
+        href: theodore_hermann_resume.pdf
+    tools:
+    - icon: github
+      menu: 
+        - text: Github
+          href: https://github.com/mrguyperson
+        - text: Website source code
+          href: https://github.com/mrguyperson/homepage
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/theodorewhermann/
+    - icon: google
+      text: Google Scholar
+      href: https://scholar.google.com/citations?user=rydWidMAAAAJ&hl=
 
 format:
   html:
-    backgroundcolor: "#81a1c1"
-    fontcolor: "#2e3440"
-    linkcolor: "black"
-    mainfont: "monospace"
+    # backgroundcolor: "#81a1c1"
+    # fontcolor: "#2e3440"
+    # linkcolor: "black"
+    # mainfont: "monospace"
     fontsize: 18px
-    theme: [cosmo, styles.scss]
+    theme: [darkly, styles.scss]
+    # theme: [darkly]

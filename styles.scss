@@ -3,11 +3,46 @@
 // Sass Variables
 // https://quarto.org/docs/output-formats/html-themes.html#sass-variables
 
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+$theme-grey-frost: #81a1c1;
+$theme-dark-frost: #5e81ac;
+$theme-snow-storm: #d8dee9;
+$theme-polar-night: #2e3440;
+$theme-black: black;
+$theme-frost-hover: #8fbcbb;
+
 /* Colors */
-$body-bg: #1b2d5b;
-$body-color: rgb(55, 58, 60);
-$link-color: rgb(39, 128, 227);
+// $body-bg: $theme-snow-storm;
+// $body-color: $theme-polar-night;
+// $link-color: $theme-polar-night;
+// $navbar-bg: $theme-grey-frost;
 
 /* Fonts */
-$font-family-sans-serif: "Source Sans Pro", -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$font-size-root: 17px;
+$font-family-sans-serif: "Libre Franklin", sans-serif;
+// $font-size-root: 17px;
+
+/*-- scss:rules --*/
+// .navbar * {
+//     color: $theme-polar-night;
+//     transition-duration: 0.5s;
+// }
+
+// span.navbar-title {
+//     transition-duration: 0.5s;
+//     color: $theme-polar-night;
+//     &:hover {
+//       color: lighten($theme-polar-night, 20%);
+//       transition-duration: 0.5s;
+//     }
+// }
+
+// span.menu-text {
+//     transition-duration: 0.5s;
+//     color: $theme-polar-night;
+//     &:hover {
+//       color: lighten($theme-polar-night, 20%);
+//       transition-duration: 0.5s;
+//     }
+// }
