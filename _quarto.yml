@@ -35,5 +35,7 @@ format:
     # linkcolor: "black"
     # mainfont: "monospace"
     fontsize: 18px
-    theme: [darkly]
+    theme:
+      light: flatly
+      dark: darkly
     # theme: [darkly]
