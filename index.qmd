@@ -1,7 +1,6 @@
 ---
 title: "Theodore Hermann"
 subtitle: "Data Analyst | Ecologist"
-# `profile.jpg` photo by Jan Tinneberg on https://unsplash.com
 image: profile.jpg
 about: # https://quarto.org/docs/websites/website-about.html
   template: jolla
@@ -18,7 +17,7 @@ about: # https://quarto.org/docs/websites/website-about.html
       text: Google Scholar
       href: https://scholar.google.com/citations?user=rydWidMAAAAJ&hl=
 ---
-<!-- Get in touch! -->
+Get in touch!
 <!-- {{< lipsum 1 >}}
 
 ## Education

@@ -48,8 +48,6 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 
-/.quarto/
-
-
+# Quarto
 /.quarto/
 /_site/
