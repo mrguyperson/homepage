@@ -11,7 +11,7 @@ website:
       - text: Contact
         href: index.qmd
       - text: CV
-        href: theodore_hermann_resume.pdf
+        href: documents/theodore_hermann_resume.pdf
   repo-url: https://github.com/mrguyperson/homepage
   repo-actions: [source]
     # tools:

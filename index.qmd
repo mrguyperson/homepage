@@ -1,7 +1,7 @@
 ---
 title: "Theodore Hermann"
 subtitle: "Data Analyst | Ecologist"
-image: profile.jpg
+image: files/images/profile.jpg
 about: # https://quarto.org/docs/websites/website-about.html
   template: jolla
   image-shape: rounded
@@ -18,22 +18,3 @@ about: # https://quarto.org/docs/websites/website-about.html
       href: https://scholar.google.com/citations?user=rydWidMAAAAJ&hl=
 ---
 Get in touch!
-<!-- {{< lipsum 1 >}}
-
-## Education
-
-**SUNY--ESF** \| Syracuse, New York, USA
-
-PhD in Biology \| Aug 2010--Dec 2018
-
-**Syracuse University** \| Syracuse, New York, USA
-
-Master in Public Administration \| July 2012--June 2013
-
-**Cornell University** \| Ithaca, New York, USA
-
-Bachelor in Earth Science \| Aug 2005--May 2009
-
-## Experience
-
-Workplace \| Job title \| April 20XX - present -->
