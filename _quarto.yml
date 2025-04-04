@@ -36,6 +36,6 @@ format:
     # mainfont: "monospace"
     fontsize: 18px
     theme:
-      light: flatly
       dark: darkly
+      light: flatly
     # theme: [darkly]
