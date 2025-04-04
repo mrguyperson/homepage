@@ -12,19 +12,19 @@ website:
         href: index.qmd
       - text: CV
         href: theodore_hermann_resume.pdf
-    tools:
-    - icon: github
-      menu: 
-        - text: Github
-          href: https://github.com/mrguyperson
-        - text: Website source code
-          href: https://github.com/mrguyperson/homepage
-    - icon: linkedin
-      text: LinkedIn
-      href: https://www.linkedin.com/in/theodorewhermann/
-    - icon: google
-      text: Google Scholar
-      href: https://scholar.google.com/citations?user=rydWidMAAAAJ&hl=
+    # tools:
+    # - icon: github
+    #   menu: 
+    #     - text: Github
+    #       href: https://github.com/mrguyperson
+    #     - text: Website source code
+    #       href: https://github.com/mrguyperson/homepage
+    # - icon: linkedin
+    #   text: LinkedIn
+    #   href: https://www.linkedin.com/in/theodorewhermann/
+    # - icon: google
+    #   text: Google Scholar
+    #   href: https://scholar.google.com/citations?user=rydWidMAAAAJ&hl=
 
 format:
   html:
