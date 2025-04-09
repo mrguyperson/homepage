@@ -8,4 +8,5 @@ RUN install2.r languageserver \
     httpgd \
     jsonlite \
     here \
-    microbenchmark
+    microbenchmark \
+    readxl
