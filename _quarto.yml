@@ -18,28 +18,10 @@ website:
             href: cv/cv_full.qmd
   repo-url: https://github.com/mrguyperson/homepage
   repo-actions: [source]
-    # tools:
-    # - icon: github
-    #   menu: 
-    #     - text: Github
-    #       href: https://github.com/mrguyperson
-    #     - text: Website source code
-    #       href: https://github.com/mrguyperson/homepage
-    # - icon: linkedin
-    #   text: LinkedIn
-    #   href: https://www.linkedin.com/in/theodorewhermann/
-    # - icon: google
-    #   text: Google Scholar
-    #   href: https://scholar.google.com/citations?user=rydWidMAAAAJ&hl=
 
 format:
   html:
-    # backgroundcolor: "#81a1c1"
-    # fontcolor: "#2e3440"
-    # linkcolor: "black"
-    # mainfont: "monospace"
     fontsize: 18px
     theme:
       dark: darkly
       light: flatly
-    # theme: [darkly]
