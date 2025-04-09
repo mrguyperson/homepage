@@ -1,0 +1,145 @@
+---
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    colorlinks: true
+    documentclass: scrartcl
+    papersize: letter
+    pdf-engine: xelatex
+    fontsize: 10.5pt
+    geometry:
+      - margin=0.75in
+      - heightrounded
+    include-in-header:
+      - preamble_short.tex
+execute:
+  warning: false
+  echo: false
+  message: false
+  eval: true
+---
+
+\newpage
+\thispagestyle{empty}
+\begingroup
+\par\centering{\LARGE{Theodore Warren Hermann, Ph.D.}}
+\vspace{-5pt}
+\par\centering {\large\Letter} ted.w.hermann@gmail.com
+\vspace{-10pt}
+\par\centering Homepage: \href{https://mrguyperson.quarto.pub/home/}{mrguyperson.quarto.pub/home/}
+\vspace{-10pt}
+\par\centering GitHub: \href{https://www.github.com/mrguyperson}{github.com/mrguyperson}
+\vspace{-10pt}
+\par\centering LinkedIn: \href{https://www.linkedin.com/in/theodorewhermann/}{linkedin.com/in/theodorewhermann}
+\par
+\endgroup
+```{r}
+#| name: setup
+library(tidyverse)
+library(readxl)
+library(here)
+library(glue)
+
+source(here("functions", "functions.R"))
+
+path <- here("cv", "publications.xlsx")
+
+
+```
+
+``` {r}
+#| name: skills
+
+skill_data <- read_excel(path, sheet = "skills") 
+
+skills <- filter_and_pull(skill_data, skill, "skill") %>%
+    paste(collapse = ", ")
+code <- filter_and_pull(skill_data, skill, "programming_language") %>%
+    paste(collapse = ", ")
+tech <- filter_and_pull(skill_data, skill, "tech") %>%
+    paste(collapse = ", ")
+languages <- filter_and_pull(skill_data, skill, "language") %>%
+    paste(collapse = ", ")
+
+```
+# Summary
+Skills: `r skills`
+\par\vspace{-5pt}
+Code: `r code`
+\par\vspace{-5pt}
+Tech: `r tech`
+\par\vspace{-5pt}
+Languages: `r languages`
+\par\vspace{-5pt}
+# Experience
+\par\vspace{-5pt}
+```{r}
+#| name: jobs
+
+data <- read_excel(path, sheet = "experience") %>%
+    mutate(in_short_form = as.logical(in_short_form)) %>%
+    filter(in_short_form) %>%
+    mutate(
+        month_start = month(start, label = TRUE, abbr = TRUE),
+        month_end = month(end, label = TRUE, abbr = TRUE),
+        date_range = glue(
+            "{month_start} {year(start)}--{month_end} {year(end)}"
+        ),
+        job_line = glue(
+            "{date_range}: **{title}** - {organization}"
+        ),
+        task_list = map(tasks_for_short, ~str_split(.x, "\\*")[[1]])
+    ) %>% 
+    unnest(task_list) %>%
+    mutate(
+        bullet_tasks = glue(
+            "* {task_list}"
+        )
+    )
+
+jobs <- pull(data, job_line) %>% unique()
+
+```
+
+`r jobs[1]`
+
+```{r}
+#| results: asis
+
+data %>%
+    filter(job_line == jobs[1]) %>%
+    pull(bullet_tasks)
+```
+
+
+`r jobs[2]`
+
+```{r}
+#| results: asis
+
+data %>%
+    filter(job_line == jobs[2]) %>%
+    pull(bullet_tasks)
+```
+
+
+`r jobs[3]`
+
+```{r}
+#| results: asis
+
+data %>%
+    filter(job_line == jobs[3]) %>%
+    pull(bullet_tasks)
+```
+
+
+
+# Education
+
+2018\. Ph.D., Biology. The State University of New York–College of Environmental Science and Forestry (SUNY–ESF). Syracuse, NY, USA.
+
+2013\. M.P.A., Public Administration. Syracuse University. Syracuse, NY, USA.
+
+2009\. B.S., Science of Earth Systems. Cornell University. Ithaca, NY, USA.

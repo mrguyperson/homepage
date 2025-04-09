@@ -12,7 +12,7 @@ format:
       - margin=1in
       - heightrounded
     include-in-header:
-      - preamble.tex
+      - preamble_long.tex
 execute:
   warning: false
   echo: false

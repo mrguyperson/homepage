@@ -12,7 +12,7 @@ website:
       - text: CV
         menu:
           - text: Short form
-            href: documents/theodore_hermann_resume.pdf
+            href: cv/cv_short.qmd
           - text: Long form
             href: cv/cv_full.qmd
   repo-url: https://github.com/mrguyperson/homepage
