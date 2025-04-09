@@ -79,7 +79,7 @@ read_excel(path, sheet = "experience") %>%
 ```
 
 
-# Peer-reviewed publcations
+# Peer-reviewed publications
 ```{r}
 #| name: publications
 #| results: asis
