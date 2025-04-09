@@ -24,7 +24,7 @@ execute:
 \vspace{-5pt}
 \par\centering {\large\Letter} ted.w.hermann@gmail.com
 \vspace{-5pt}
-\par\centering Homepage: \href{https://mrguyperson.quarto.pub/home/}{mrguyperson.quarto.pub/home/}
+\par\centering Homepage: \href{https://mrguyperson.quarto.pub}{mrguyperson.quarto.pub}
 \vspace{-5pt}
 \par\centering LinkedIn: \href{https://www.linkedin.com/in/theodorewhermann/}{linkedin.com/in/theodorewhermann}
 \vspace{-5pt}

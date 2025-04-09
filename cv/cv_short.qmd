@@ -27,7 +27,7 @@ execute:
 \vspace{-5pt}
 \par\centering {\large\Letter} ted.w.hermann@gmail.com
 \vspace{-10pt}
-\par\centering Homepage: \href{https://mrguyperson.quarto.pub/home/}{mrguyperson.quarto.pub/home/}
+\par\centering Homepage: \href{https://mrguyperson.quarto.pub}{mrguyperson.quarto.pub}
 \vspace{-10pt}
 \par\centering GitHub: \href{https://www.github.com/mrguyperson}{github.com/mrguyperson}
 \vspace{-10pt}
