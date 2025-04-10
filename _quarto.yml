@@ -12,9 +12,9 @@ website:
       - text: CV
         menu:
           - text: Resume
-            href: cv/cv_short.qmd
+            href: cv/hermann_resume.qmd
           - text: Curriculum Vitae
-            href: cv/cv_full.qmd
+            href: cv/hermann_cv.qmd
   repo-url: https://github.com/mrguyperson/homepage
   repo-actions: [source]
 
