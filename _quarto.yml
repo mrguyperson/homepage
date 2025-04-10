@@ -19,6 +19,8 @@ website:
             href: cv/hermann_cv.qmd
   repo-url: https://github.com/mrguyperson/homepage
   repo-actions: [source]
+  page-footer: 
+    border: true
 
 format:
   html:
