@@ -4,7 +4,7 @@
   description: >
     This project is developing a spatially explicit agent-based model (ABM) that links bathymetry, hydrology, and water and habitat quality to 
     population-level responses of fish species in the Sacramento River.
-  categories: [R, Netlogo, Agent-based Modeling, Data Cleaning, QGIS, Data Visualization]
+  categories: [R, Netlogo, Agent-based Modelling, Data Cleaning, QGIS, Data Visualization]
   date: 2025-03-31
 
 - title: Fin-spine microchemisty of Caspian Sea sturgeon
