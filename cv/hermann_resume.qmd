@@ -12,7 +12,7 @@ format:
       - margin=.8in
       - heightrounded
     include-in-header:
-      - preamble_short.tex
+      - preamble_resume.tex
 execute:
   warning: false
   echo: false
