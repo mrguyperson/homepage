@@ -11,9 +11,9 @@ website:
         href: index.qmd
       - text: CV
         menu:
-          - text: Short form
+          - text: Resume
             href: cv/cv_short.qmd
-          - text: Long form
+          - text: Curriculum Vitae
             href: cv/cv_full.qmd
   repo-url: https://github.com/mrguyperson/homepage
   repo-actions: [source]

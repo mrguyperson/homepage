@@ -9,7 +9,7 @@ format:
     pdf-engine: xelatex
     fontsize: 10.5pt
     geometry:
-      - margin=0.75in
+      - margin=.8in
       - heightrounded
     include-in-header:
       - preamble_short.tex
@@ -19,9 +19,9 @@ execute:
   message: false
   eval: true
 ---
-
+<!-- 
 \newpage
-\thispagestyle{empty}
+\thispagestyle{empty} -->
 \begingroup
 \par\centering{\LARGE{Theodore Warren Hermann, Ph.D.}}
 \vspace{-5pt}
@@ -138,8 +138,8 @@ data %>%
 
 # Education
 
-2018\. Ph.D., Biology. The State University of New York–College of Environmental Science and Forestry (SUNY–ESF). Syracuse, NY, USA.
+2018\. **Ph.D.**, **Biology**. The State University of New York–College of Environmental Science and Forestry (SUNY–ESF). Syracuse, NY, USA.
 
-2013\. M.P.A., Public Administration. Syracuse University. Syracuse, NY, USA.
+2013\. **M.P.A.**, **Public Administration**. Syracuse University. Syracuse, NY, USA.
 
-2009\. B.S., Science of Earth Systems. Cornell University. Ithaca, NY, USA.
+2009\. **B.S.**, **Science of Earth Systems**. Cornell University. Ithaca, NY, USA.
