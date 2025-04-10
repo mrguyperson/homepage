@@ -21,6 +21,6 @@
   # image from https://static.grainger.com/rp/s/is/image/Grainger/5TNV3_AS01
   image: images/heat_exchanger_tube.jpg
   description: >
-    This project used of data science and machine learning models to make flaw predictions in heat exchanger tubes with better accuracy than industry standards.
+    This project used data science and machine learning models to make flaw predictions in heat exchanger tubes with better accuracy than industry standards.
   categories: [Python, Machine Learning]
   date: 2020-04-01
