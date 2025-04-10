@@ -1,0 +1,26 @@
+- title: Fish Habitat Assessment and Simulation Tool (FHAST)
+  path: https://www.conservation.bio/fhast
+  image: images/curved_river_grid.jpg
+  description: >
+    This project is developing a spatially explicit agent-based model (ABM) that links bathymetry, hydrology, and water and habitat quality to 
+    population-level responses of fish species in the Sacramento River.
+  categories: [R, Netlogo, Agent-based Modeling, Data Cleaning, QGIS, Data Visualization]
+  date: 2025-03-31
+
+- title: Fin-spine microchemisty of Caspian Sea sturgeon
+  path: https://github.com/mrguyperson/caspian_sturgeon_spines
+  image: images/map.png
+  description: >
+    This open-science project focused on using fin-spine microchemistry to discriminate among starry sturgeon from different parts of the Caspian Sea.
+    The project was run using a `targets` pipeline to complete data cleaning, analyses, and visualization, as well as producing the final manuscript.
+  categories: [R, Machine Learning, Statistical Modelling, Workflow Pipeline, Data Visualization]
+  date: 2023-10-05
+
+- title: Sizing pits in heat exchanger tubes with eddy current measurements
+  path: https://github.com/mrguyperson/PitDepthPrediction
+  # image from https://static.grainger.com/rp/s/is/image/Grainger/5TNV3_AS01
+  image: images/heat_exchanger_tube.jpg
+  description: >
+    This project used of data science and machine learning models to make flaw predictions in heat exchanger tubes with better accuracy than industry standards.
+  categories: [Python, Machine Learning]
+  date: 2020-04-01

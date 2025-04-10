@@ -9,6 +9,8 @@ website:
     left:
       - text: Contact
         href: index.qmd
+      - text: Projects
+        href: projects/index.qmd
       - text: CV
         menu:
           - text: Resume
