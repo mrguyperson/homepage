@@ -9,7 +9,7 @@ format:
     pdf-engine: xelatex
     fontsize: 10.5pt
     geometry:
-      - margin=.8in
+      - margin=.78in
       - heightrounded
     include-in-header:
       - preamble_resume.tex
@@ -25,13 +25,17 @@ execute:
 \begingroup
 \par\centering{\LARGE{Theodore Warren Hermann, Ph.D.}}
 \vspace{-5pt}
+\par\centering Lützenstraße 2, 10711 Berlin
+\vspace{-10pt}
 \par\centering {\large\Letter} ted.w.hermann@gmail.com
+\vspace{-10pt}
+\par\centering{{\large\Telefon} +49 176 544 06201}
 \vspace{-10pt}
 \par\centering Homepage: \href{https://mrguyperson.quarto.pub}{mrguyperson.quarto.pub}
 \vspace{-10pt}
-\par\centering GitHub: \href{https://www.github.com/mrguyperson}{github.com/mrguyperson}
+<!-- \par\centering GitHub: \href{https://www.github.com/mrguyperson}{github.com/mrguyperson}
 \vspace{-10pt}
-\par\centering LinkedIn: \href{https://www.linkedin.com/in/theodorewhermann/}{linkedin.com/in/theodorewhermann}
+\par\centering LinkedIn: \href{https://www.linkedin.com/in/theodorewhermann/}{linkedin.com/in/theodorewhermann} -->
 \par
 \endgroup
 ```{r}
