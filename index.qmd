@@ -1,6 +1,6 @@
 ---
 title: "Theodore Hermann"
-subtitle: "Data Analyst | Ecologist"
+subtitle: "Ecologist | Data Analyst"
 image: images/profile.jpg
 about: # https://quarto.org/docs/websites/website-about.html
   template: jolla

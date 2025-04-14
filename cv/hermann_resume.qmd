@@ -87,7 +87,7 @@ data <- read_excel(path, sheet = "experience") %>%
             "{month_start} {year(start)}--{month_end} {year(end)}"
         ),
         job_line = glue(
-            "{date_range}: **{title}** - {organization}"
+            "{date_range}: **{names_for_short}** - {organization}"
         ),
         task_list = map(tasks_for_short, ~str_split(.x, "\\*")[[1]])
     ) %>% 
