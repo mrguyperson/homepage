@@ -7,7 +7,7 @@ format:
     documentclass: scrartcl
     papersize: letter
     pdf-engine: xelatex
-    fontsize: 10.5pt
+    fontsize: 10pt
     geometry:
       - margin=.78in
       - heightrounded
@@ -22,7 +22,7 @@ execute:
 <!-- 
 \newpage
 \thispagestyle{empty} -->
-\begingroup
+<!-- \begingroup
 \par\centering{\LARGE{Theodore Warren Hermann, Ph.D.}}
 \vspace{-5pt}
 \par\centering Lützenstraße 2, 10711 Berlin
@@ -32,12 +32,14 @@ execute:
 \par\centering{{\large\Telefon} +49 176 544 06201}
 \vspace{-10pt}
 \par\centering Homepage: \href{https://mrguyperson.quarto.pub}{mrguyperson.quarto.pub}
-\vspace{-10pt}
+\vspace{-10pt} -->
 <!-- \par\centering GitHub: \href{https://www.github.com/mrguyperson}{github.com/mrguyperson}
 \vspace{-10pt}
 \par\centering LinkedIn: \href{https://www.linkedin.com/in/theodorewhermann/}{linkedin.com/in/theodorewhermann} -->
-\par
-\endgroup
+<!-- \par
+\endgroup -->
+
+
 ```{r}
 #| name: setup
 library(tidyverse)
@@ -52,31 +54,66 @@ path <- here("cv", "publications.xlsx")
 
 ```
 
+
+```{r}
+#| name: contact
+
+contact_info <- read_excel(path, sheet = "contact")
+
+email <- filter_and_pull(contact_info, value, "email")
+city <- filter_and_pull(contact_info, value, "city")
+website <- filter_and_pull(contact_info, value, "website")
+phone <- filter_and_pull(contact_info, value, "phone")
+```
+
+\begingroup
+\par\centering\textbf{Theodore W. Hermann, Ph.D.}
+\vspace{-10pt}
+\par\centering `r city` | [`r email`](mailto:`r email`) | `r phone`
+\vspace{-10pt}
+\par\centering Portfolio: [`r website`](`r website`)
+\vspace{-10pt}
+
+\endgroup
+
+
+## Professional Summary
+
+Analytical and detail-oriented data scientist with 7+ years of experience using machine learning, simulation, and statistical analysis to solve complex problems. Proven track record in building predictive models, automating workflows, and delivering insights to non-technical stakeholders. Skilled in Python, R, SQL, and Docker, with a passion for reproducibility and open-source solutions. Looking to apply strong quantitative skills and a scientific mindset to business challenges in data-driven organizations.
+
+
 ``` {r}
 #| name: skills
 
-skill_data <- read_excel(path, sheet = "skills") 
+skill_data <- read_excel(path, sheet = "skills") %>%
+    group_by(order) %>%
+    arrange(order, .by_group = TRUE) %>%
+    ungroup()
 
-skills <- filter_and_pull(skill_data, skill, "skill") %>%
-    paste(collapse = ", ")
+techniques <- filter_and_pull(skill_data, skill, "technique") %>%
+    paste(collapse = ", ") %>%
+    stringr::str_to_sentence()
 code <- filter_and_pull(skill_data, skill, "programming_language") %>%
     paste(collapse = ", ")
-tech <- filter_and_pull(skill_data, skill, "tech") %>%
+tools <- filter_and_pull(skill_data, skill, "tool") %>%
     paste(collapse = ", ")
 languages <- filter_and_pull(skill_data, skill, "language") %>%
     paste(collapse = ", ")
+soft_skills <- filter_and_pull(skill_data, skill, "soft_skill") %>%
+    paste(collapse = ", ") %>%
+    stringr::str_to_sentence()
 
 ```
-# Summary
-Skills: `r skills`
-\par\vspace{-5pt}
-Code: `r code`
-\par\vspace{-5pt}
-Tech: `r tech`
-\par\vspace{-5pt}
-Languages: `r languages`
-\par\vspace{-5pt}
-# Experience
+## Core Skills & Tools
+
+* Code: `r code`
+* Tools: `r tools`
+* Techniques: `r techniques`
+* Soft Skills: `r soft_skills`
+* Languages: `r languages`
+
+
+## Professional Experience
 \par\vspace{-5pt}
 ```{r}
 #| name: jobs
@@ -140,7 +177,7 @@ data %>%
 
 
 
-# Education
+## Education
 
 2018\. **Ph.D.**, **Biology**. The State University of New York–College of Environmental Science and Forestry (SUNY–ESF). Syracuse, NY, USA.
 
