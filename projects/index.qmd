@@ -3,5 +3,5 @@ title: Projects
 listing:
   contents: projects.yml
   type: grid
-  max-description-length: 300
+  max-description-length: 350
 ---
