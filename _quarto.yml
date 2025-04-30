@@ -11,6 +11,10 @@ website:
         href: index.qmd
       - text: Projects
         href: projects/index.qmd
+      - text: Dashboards
+        menu:
+          - text: Weather in Berlin
+            href: https://mrguyperson.quarto.pub/berlin_weather/
       - text: CV
         menu:
           - text: Resume
