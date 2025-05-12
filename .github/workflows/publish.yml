@@ -16,7 +16,10 @@ jobs:
         with:
           r-version: 4.5.0
           use-public-rspm: true
-      - name: Install R packages
+      - name: Install system dependencies
+        run: |
+          sudo apt update
+          sudo apt install libudunits2-dev libxtst6 libxt6 libmagick++-dev libglpk-dev cmake libnode-dev libgdal-dev gdal-bin libgeos-dev libproj-dev libsqlite3-dev libpng-dev     - name: Install R packages
         uses: r-lib/actions/setup-renv@v2
       - name: Set up tinytex
         uses: r-lib/actions/setup-tinytex@v2
