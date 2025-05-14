@@ -46,6 +46,13 @@ path <- here("cv", "publications.xlsx")
 
 ```
 
+# Professional Summary
+
+I hold a Ph.D. in Biology and an M.P.A. in Public Administration, with research spanning fish migration ecology, otolith microchemistry, freshwater conservation, and agent-based modeling. My postdoctoral work at UC Santa Cruz focused on species movement simulation, machine learning, and interdisciplinary modeling of ecological systems. In my doctoral research, I used biogeochemical markers recorded in the otoliths of migratory fishes to infer life-history patterns.
+
+Alongside my academic career, I’ve worked extensively as a technical and freelance copy editor. I’ve edited hundreds of manuscripts for non-native English speakers and publishers, covering disciplines including taxonomy, remote sensing, ecology, geology, meteorology, medical trials, and machine learning. This work involved adhering to and revising style guides, collaborating with editorial teams, formatting complex content, and ensuring scientific clarity at all levels, from structural framing down to punctuation (I've hunted down my fair share of hyphens that should have been en dashes or minus signs!). I’ve also served as a peer reviewer for journals such as *Aquatic Conservation* and *Ecology and Evolution*, giving me insight into editorial decision-making and manuscript evaluation. 
+
+
 # Education
 
 2018\. Ph.D., Biology. The State University of New York–College of Environmental Science and Forestry (SUNY–ESF). Syracuse, NY, USA.
