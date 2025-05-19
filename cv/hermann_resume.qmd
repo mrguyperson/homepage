@@ -79,7 +79,7 @@ phone <- filter_and_pull(contact_info, value, "phone")
 
 ## Professional Summary
 
-Detail-oriented biologist and data analyst with 7+ years of experience using machine learning, simulation, and statistical analysis to solve complex problems. Proven track record in building predictive models, automating workflows, and delivering insights to non-technical stakeholders. Skilled in Python, R, SQL, and Docker, with a passion for reproducibility and open-source solutions. Looking to apply strong quantitative skills and a scientific mindset to solve challenges in data-driven organizations.
+Versatile biologist and data analyst with 7+ years of experience using simulation, statistical modeling, and data analysis to tackle complex, interdisciplinary problems. Skilled in translating environmental science and policy into actionable insights for diverse audiences. Adept at working across time zones and disciplines, quickly mastering new domains, and delivering results under ambiguity. Proficient in Python, R, and Docker, with a strong foundation in public administration and a passion for reproducibility and sustainable impact.
 
 
 ``` {r}
