@@ -41,6 +41,8 @@ library(readxl)
 library(here)
 library(glue)
 
+source(here("functions", "functions.R"))
+
 path <- here("cv", "publications.xlsx")
 
 
@@ -198,5 +200,62 @@ read_excel(path, sheet = "reviewer") %>%
         "* {journal}"
     )) %>%
     pull(journal)
+
+```
+
+``` {r}
+#| name: skills
+
+skill_data <- read_excel(path, sheet = "skills") %>%
+    group_by(order) %>%
+    arrange(order, .by_group = TRUE) %>%
+    ungroup() %>%
+    mutate(skill = glue("* {skill}"))
+
+techniques <- filter_and_pull(skill_data, skill, "technique")
+code <- filter_and_pull(skill_data, skill, "programming_language")
+tools <- filter_and_pull(skill_data, skill, "tool")
+languages <- filter_and_pull(skill_data, skill, "language")
+soft_skills <- filter_and_pull(skill_data, skill, "soft_skill")
+
+```
+
+# Programming Languages
+
+``` {r} 
+#| results: asis
+code
+
+```
+
+# Tech Tools
+
+``` {r} 
+#| results: asis
+tools
+
+```
+
+# Quantitative Skills
+
+``` {r} 
+#| results: asis
+techniques
+
+```
+
+# Language Skills
+
+``` {r} 
+#| results: asis
+languages
+
+```
+
+# Soft Skills
+
+``` {r} 
+#| results: asis
+soft_skills
 
 ```
