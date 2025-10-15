@@ -40,16 +40,6 @@ execute:
 \endgroup -->
 
 ```{r}
-# library(here)
-# source(here("functions", "functions.R"))
-
-# source(here::here("cv", "_partials", "helpers.qmd"))
-```
-
-<!-- {{< include "_partials/contact.qmd" >}} -->
-
-
-```{r}
 #| name: setup
 
 library(tidyverse)
@@ -57,7 +47,7 @@ library(readxl)
 library(here)
 library(glue)
 
-
+source(here("functions", "functions.R"))
 path <- here("cv", "publications.xlsx")
 
 
@@ -131,6 +121,7 @@ data <- read_excel(path, sheet = "experience") %>%
     filter(in_short_form) %>%
     mutate(
         month_start = month(start, label = TRUE, abbr = TRUE),
+        end = if_else(is.na(end), today(), end),
         month_end = month(end, label = TRUE, abbr = TRUE),
         date_range = glue(
             "{month_start} {year(start)}--{month_end} {year(end)}"

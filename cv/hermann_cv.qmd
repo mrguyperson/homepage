@@ -73,6 +73,7 @@ read_excel(path, sheet = "experience") %>%
     rowid_to_column() %>%
     mutate(
         month_start = month(start, label = TRUE, abbr = TRUE),
+        end = if_else(is.na(end), today(), end),
         month_end = month(end, label = TRUE, abbr = TRUE),
         date_range = glue(
             "{month_start} {year(start)}--{month_end} {year(end)}"
