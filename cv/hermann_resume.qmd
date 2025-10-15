@@ -77,7 +77,7 @@ phone <- filter_and_pull(contact_info, value, "phone")
 
 ## Professional Summary
 
-Versatile biologist and data analyst with 7+ years of experience using simulation, statistical modeling, and data analysis to tackle complex, interdisciplinary problems. Skilled in translating environmental science and policy into actionable insights for diverse audiences. Adept at working across time zones and disciplines, quickly mastering new domains, and delivering results under ambiguity. Proficient in Python, R, and Docker, with a strong foundation in public administration and a passion for reproducibility and sustainable impact.
+Scientist and data analyst with over seven years of experience using simulation, statistical modeling, and data analysis to solve complex and interdisciplinary problems. Skilled at translating research questions into clear, reproducible workflows and actionable results. Experienced in collaborating across fields and time zones, learning new domains quickly, and delivering well-documented, reliable outcomes. Proficient in R, Python, bash, and Docker, with a background in biology, Earth science, and public administration and a commitment to open, sustainable science.
 
 
 ``` {r}
