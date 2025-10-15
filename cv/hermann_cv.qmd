@@ -50,12 +50,7 @@ path <- here("cv", "publications.xlsx")
 
 # Professional Summary
 
-I hold a Ph.D. in Biology and an M.P.A. in Public Administration, with a research background that spans freshwater ecology, species movement modeling, and agent-based simulation. At UC Santa Cruz, my postdoctoral work focused on simulating fish migration in modified river systems---collaborating across disciplines and time zones to build tools that supported evidence-based decision-making for water-resource managers. Earlier, my doctoral research applied biogeochemical markers---measured using laser ablation inductively coupled plasma mass spectrometry and scanning X-ray fluorescence microscopy---to reconstruct life-history patterns in migratory fish, thereby linking fieldwork, laboratory chemistry, and ecological inference.
-
-Beyond academia, I’ve worked extensively as a technical and copy editor for scientific manuscripts across fields like ecology, remote sensing, geology, machine learning, and medical trials. I’ve edited hundreds of papers—many for non-native English speakers---where I focused on improving clarity and impact without losing the author’s voice. I’ve also reviewed manuscripts for journals like *Aquatic Conservation* and *Ecology and Evolution*, giving me insight into the publishing process from both sides. This editorial experience complements my scientific training and strengthens my ability to communicate complex ideas clearly and diplomatically---an asset in working with stakeholders, translating methodologies, or contributing to policy-aligned frameworks.
-
-My professional experience reflects a pattern: I’m comfortable jumping into new, open-ended challenges, learning rapidly, and devising practical solutions. I’m drawn to roles that require cross-functional thinking, methodological rigor, and strategic communication---especially when they serve a broader mission of ecological sustainability and systems change. 
-
+I am a scientist and software practitioner with training in ecology and quantitative methods, and several years of hands-on experience building data workflows, predictive models, and reproducible research systems. I enjoy moving between domains, whether ecology, resource management, or environmental systems, and applying rigorous, transparent computational tools to real problems. My work emphasizes clarity, modularity, and reproducibility, and I am comfortable in languages and environments such as R, Python, Julia, bash, Docker, Git, and Linux. I thrive in multidisciplinary settings, collaborating across teams and translating technical results into accessible forms for decision makers, stakeholders, or broader audiences.
 
 # Education
 

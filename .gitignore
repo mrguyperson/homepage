@@ -53,3 +53,4 @@ rsconnect/
 /_site/
 _quarto_internal_scss_error.scss
 /cv/.~lock*
+**/*.quarto_ipynb

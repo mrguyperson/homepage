@@ -39,21 +39,29 @@ execute:
 <!-- \par
 \endgroup -->
 
+```{r}
+# library(here)
+# source(here("functions", "functions.R"))
+
+# source(here::here("cv", "_partials", "helpers.qmd"))
+```
+
+<!-- {{< include "_partials/contact.qmd" >}} -->
+
 
 ```{r}
 #| name: setup
+
 library(tidyverse)
 library(readxl)
 library(here)
 library(glue)
 
-source(here("functions", "functions.R"))
 
 path <- here("cv", "publications.xlsx")
 
 
 ```
-
 
 ```{r}
 #| name: contact
