@@ -77,7 +77,7 @@ phone <- filter_and_pull(contact_info, value, "phone")
 
 ## Professional Summary
 
-Scientist and data analyst with over seven years of experience using simulation, statistical modeling, and data analysis to solve complex and interdisciplinary problems. Skilled at translating research questions into clear, reproducible workflows and actionable results. Experienced in collaborating across fields and time zones, learning new domains quickly, and delivering well-documented, reliable outcomes. Proficient in R, Python, bash, and Docker, with a background in biology, Earth science, and public administration and a commitment to open, sustainable science.
+Data Scientist and Analyst with 7+ years’ experience transforming complex environmental and industrial data into actionable insights. Expert in building reproducible analytical pipelines and predictive models using R, Python, and SQL. Proven record of improving decision-making for scientific and engineering partners through automation, transparent reporting, and stakeholder-focused solutions.
 
 
 ``` {r}
@@ -104,8 +104,8 @@ soft_skills <- filter_and_pull(skill_data, skill, "soft_skill") %>%
 ```
 ## Core Skills & Tools
 
-* Code: `r code`
-* Tools: `r tools`
+* Programming: `r code`
+* Data Tools: `r tools`
 * Techniques: `r techniques`
 * Soft Skills: `r soft_skills`
 * Languages: `r languages`

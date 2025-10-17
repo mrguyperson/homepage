@@ -13,7 +13,8 @@ pkgs <- c(
     "here",
     "httpgd",
     "tidyverse",
-    "readxl"
+    "readxl",
+    "quarto"
   )
 
 
