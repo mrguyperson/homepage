@@ -1,6 +1,7 @@
 # Reset environment every time (relies on cache for speed)
 unlink("renv.lock")
 unlink("renv", recursive = TRUE)
+unlink(".Rprofile")
 
 options(
   repos = c(RSPM = "https://packagemanager.posit.co/cran/2025-04-22"),
