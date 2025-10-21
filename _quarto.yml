@@ -17,9 +17,11 @@ website:
             href: https://mrguyperson.quarto.pub/berlin_weather/
       - text: CV
         menu:
-          - text: Resume
-            href: cv/hermann_resume.qmd
-          - text: Curriculum Vitae
+          - text: Resume (Industry)
+            href: cv/hermann_resume_industry.qmd          
+          - text: Resume (Research)
+            href: cv/hermann_resume_research.qmd
+          - text: Full Curriculum Vitae
             href: cv/hermann_cv.qmd
   repo-url: https://github.com/mrguyperson/homepage
   repo-actions: [source]

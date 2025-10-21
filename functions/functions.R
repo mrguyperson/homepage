@@ -1,5 +1,5 @@
-filter_and_pull <- function(data, column, variable) {
+filter_and_pull <- function(data, filt_column, variable, pull_column) {
     data %>%
-        filter(type == variable) %>%
-        pull({{column}})
+        filter({{filt_column}} == variable) %>%
+        pull({{pull_column}})
 }
