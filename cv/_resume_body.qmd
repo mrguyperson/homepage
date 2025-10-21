@@ -62,10 +62,11 @@ skill_data <- read_excel(path, sheet = "skills") %>%
     ungroup()
 
 comp <- filter_and_pull(skill_data, short_group, "core_competencies", skill) %>%
-    # stringr::str_to_sentence() %>%
-    paste(collapse = ", ")
-stack <- filter_and_pull(skill_data, short_group, "tech_stack", skill) %>%
-    paste(collapse = ", ")
+        smart_title() %>%
+        paste(collapse = " · ")
+stack <- filter_and_pull(skill_data, short_group, "tech_stack", skill) %>% 
+        smart_title() %>%
+        paste(collapse = " · ")
 ```
 
 **Core Competencies**: `r comp`
@@ -144,13 +145,13 @@ data %>%
 
 ## Education
 
-2018\. **Ph.D.**, **Biology**. The State University of New York–College of Environmental Science and Forestry (SUNY–ESF). Syracuse, NY, USA.
+**Ph.D.**, **Biology**, 2018 -- The State University of New York–College of Environmental Science and Forestry (SUNY–ESF). Syracuse, NY, USA.
 
-2013\. **M.P.A.**, **Public Administration**. Syracuse University. Syracuse, NY, USA.
+**M.P.A.**, **Public Administration**, 2013 -- Syracuse University. Syracuse, NY, USA.
 
-2009\. **B.S.**, **Science of Earth Systems**. Cornell University. Ithaca, NY, USA.
+**B.S.**, **Science of Earth Systems**, 2009 -- Cornell University. Ithaca, NY, USA.
 
-## Language & Work Eligibility
+## Languages & Eligibility
 
 ``` {r}
 #| name: languages
