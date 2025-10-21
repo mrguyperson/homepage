@@ -12,7 +12,7 @@ format:
       - margin=.78in
       - heightrounded
     include-in-header:
-      - preamble_resume.tex
+      - preamble_resume_research.tex
 params:
     profile: "research"
 execute:
@@ -22,4 +22,4 @@ execute:
   eval: true
 ---
 
-{{< include _cv_body.qmd >}}
+{{< include _resume_body.qmd >}}

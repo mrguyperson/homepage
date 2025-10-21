@@ -72,6 +72,7 @@ I am a scientist and software practitioner with training in ecology and quantita
 read_excel(path, sheet = "experience") %>%
     rowid_to_column() %>%
     mutate(
+        across(start:end, dmy),
         month_start = month(start, label = TRUE, abbr = TRUE),
         end = if_else(is.na(end), today(), end),
         month_end = month(end, label = TRUE, abbr = TRUE),
@@ -81,7 +82,8 @@ read_excel(path, sheet = "experience") %>%
         jobs = glue(
             "{rowid}. {date_range}. **{title}**, {organization}."
         )
-    ) %>% pull(jobs)
+    ) %>% 
+    pull(jobs)
 
 ```
 
@@ -208,11 +210,14 @@ skill_data <- read_excel(path, sheet = "skills") %>%
     ungroup() %>%
     mutate(skill = glue("* {skill}"))
 
-techniques <- filter_and_pull(skill_data, skill, "technique")
-code <- filter_and_pull(skill_data, skill, "programming_language")
-tools <- filter_and_pull(skill_data, skill, "tool")
-languages <- filter_and_pull(skill_data, skill, "language")
-soft_skills <- filter_and_pull(skill_data, skill, "soft_skill")
+categories <- c("technique", "programming_language", "tool", "language", "soft_skill")
+formatted_skills <- map(categories, ~ filter_and_pull(skill_data, type, .x, skill))
+
+techniques <- formatted_skills[[1]]
+code <- formatted_skills[[2]]
+tools <- formatted_skills[[3]]
+languages <- formatted_skills[[4]]
+soft_skills <- formatted_skills[[5]]
 
 ```
 

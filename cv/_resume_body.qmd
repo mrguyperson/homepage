@@ -85,7 +85,7 @@ data <- read_excel(path, sheet = "experience") %>%
         short_audience %in% c("both", audience)
         ) %>%
     mutate(
-        across(start:end, mdy),
+        across(start:end, dmy),
         month_start = month(start, label = TRUE, abbr = TRUE),
         end = if_else(is.na(end), today(), end),
         month_end = month(end, label = TRUE, abbr = TRUE),
