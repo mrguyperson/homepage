@@ -21,6 +21,8 @@ website:
             href: cv/hermann_resume_industry.qmd          
           - text: Resume (Research)
             href: cv/hermann_resume_research.qmd
+          - text: Resume (Publishing)
+            href: cv/hermann_resume_publishing.qmd
           - text: Full Curriculum Vitae
             href: cv/hermann_cv.qmd
   repo-url: https://github.com/mrguyperson/homepage

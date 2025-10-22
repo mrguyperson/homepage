@@ -45,17 +45,18 @@ txt <- read_excel(path, sheet = "summary") %>%
 
 ## Professional Summary
 
-<!-- Data Scientist and Analyst with 7+ years’ experience transforming complex environmental and industrial data into actionable insights. Expert in building reproducible analytical pipelines and predictive models using R, Python, and SQL. Proven record of improving decision-making for scientific and engineering partners through automation, transparent reporting, and stakeholder-focused solutions. -->
-
 `r txt`
  
 ``` {r}
 #| name: skills
 
-skill_data <- read_excel(path, sheet = "skills") %>%
+skill_sheet <- read_excel(path, sheet = "skills")
+
+skill_data <- skill_sheet %>%
+    mutate(in_short_form = as.logical(in_short_form)) %>%
     filter(
-        as.logical(in_short_form),
-        short_audience %in% c("both", audience)
+        in_short_form,
+        grepl(paste0("(^|_)", audience, "($|_)"), short_audience) | short_audience == "all"
         ) %>%
     group_by(short_group) %>%
     arrange(order_short, .by_group = TRUE) %>%
@@ -83,12 +84,15 @@ data <- read_excel(path, sheet = "experience") %>%
     mutate(in_short_form = as.logical(in_short_form)) %>%
     filter(
         in_short_form,
-        short_audience %in% c("both", audience)
+        grepl(paste0("(^|_)", audience, "($|_)"), short_audience) | short_audience == "all"
         ) %>%
     mutate(
-        across(start:end, dmy),
+        across(start:end, as_date),
+        end = if_else(is.na(end), today(), end)
+    ) %>%
+    arrange(desc(end)) %>%
+    mutate(
         month_start = month(start, label = TRUE, abbr = TRUE),
-        end = if_else(is.na(end), today(), end),
         month_end = month(end, label = TRUE, abbr = TRUE),
         date_range = glue(
             "{month_start} {year(start)}--{month_end} {year(end)}"
@@ -155,7 +159,7 @@ data %>%
 
 ``` {r}
 #| name: languages
-languages <- filter_and_pull(skill_data, type, "language", skill) %>%
+languages <- filter_and_pull(skill_sheet, type, "language", skill) %>%
     c("Authorized to work in Germany") %>%
     paste(collapse = "\u00A0·\u00A0")
 

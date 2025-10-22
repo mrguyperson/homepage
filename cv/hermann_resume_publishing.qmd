@@ -1,0 +1,24 @@
+---
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    colorlinks: true
+    documentclass: scrartcl
+    papersize: letter
+    pdf-engine: xelatex
+    fontsize: 10pt
+    geometry:
+      - margin=.78in
+      - heightrounded
+    include-in-header:
+      - preamble_resume_publishing.tex
+params:
+    profile: "publishing"
+execute:
+  warning: false
+  echo: false
+  message: false
+  eval: true
+---
+{{< include _resume_body.qmd >}}
