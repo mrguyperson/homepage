@@ -70,9 +70,12 @@ I am a scientist and software practitioner with training in ecology and quantita
 #| results: asis
 
 read_excel(path, sheet = "experience") %>%
+    select(start:organization) %>%
+    na.omit() %>%
+    distinct() %>%
     rowid_to_column() %>%
     mutate(
-        across(start:end, dmy),
+        across(start:end, as_date),
         month_start = month(start, label = TRUE, abbr = TRUE),
         end = if_else(is.na(end), today(), end),
         month_end = month(end, label = TRUE, abbr = TRUE),
