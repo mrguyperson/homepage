@@ -71,16 +71,18 @@ I am a scientist and software practitioner with training in ecology and quantita
 
 read_excel(path, sheet = "experience") %>%
     select(start:organization) %>%
-    na.omit() %>%
+    drop_na(title) %>%
     distinct() %>%
+    mutate(
+        end = if_else(is.na(end), today(), end)
+        ) %>%
+    arrange(desc(end)) %>%
     rowid_to_column() %>%
     mutate(
-        across(start:end, as_date),
         month_start = month(start, label = TRUE, abbr = TRUE),
-        end = if_else(is.na(end), today(), end),
         month_end = month(end, label = TRUE, abbr = TRUE),
         date_range = glue(
-            "{month_start} {year(start)}--{month_end} {year(end)}"
+            "{month_start}. {year(start)}--{month_end}. {year(end)}"
         ),
         jobs = glue(
             "{rowid}. {date_range}. **{title}**, {organization}."
