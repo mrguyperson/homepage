@@ -1,0 +1,57 @@
+```{r}
+skill_data <- read_excel(path, sheet = "skills") %>%
+  group_by(order) %>%
+  arrange(order, .by_group = TRUE) %>%
+  ungroup() %>%
+  mutate(skill = glue("* {skill}"))
+
+categories <- c("programming_language", "tool", "technique", "language", "soft_skill")
+formatted_skills <- map(categories, ~ filter_and_pull(skill_data, type, .x, skill))
+
+code <- formatted_skills[[1]]
+tools <- formatted_skills[[2]]
+techniques <- formatted_skills[[3]]
+languages <- formatted_skills[[4]]
+soft_skills <- formatted_skills[[5]]
+```
+
+## Programming Languages
+
+```{r} 
+#| results: asis
+code
+
+```
+
+## Tech Tools
+
+```{r} 
+#| results: asis
+tools
+
+```
+
+## Quantitative Skills
+
+```{r} 
+#| results: asis
+techniques
+
+```
+
+## Language Skills
+
+```{r} 
+#| results: asis
+languages
+
+```
+
+## Soft Skills
+
+```{r} 
+#| results: asis
+soft_skills
+
+```
+

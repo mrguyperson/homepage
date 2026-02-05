@@ -1,0 +1,35 @@
+```{r}
+#| label: skills
+
+skill_sheet <- read_excel(path, sheet = "skills")
+
+hybrid_cv_skills <- skill_sheet %>% 
+    separate_rows(profile, sep = ",\\s*") %>%
+    filter(.data$profile == .env$profile) %>%
+    group_by(hybrid_group) %>%
+    arrange(order_short, .by_group = TRUE) %>%
+    ungroup()
+
+hybrid_groups <- unique(hybrid_cv_skills$hybrid_group)
+
+grouped_skills <- map(hybrid_groups, ~ filter_and_pull(hybrid_cv_skills, hybrid_group, .x, skill))
+names(grouped_skills) <- hybrid_groups
+
+
+```
+
+
+
+## Core Skills & Methods
+
+**Quantitative & Computational Ecology**  
+`r grouped_skills$quant`
+
+**Spatial Data Integration**  
+`r grouped_skills$spatial`
+
+**Reproducible Research & Data Engineering**  
+`r grouped_skills$repro`
+
+**Tools & Languages**  
+`r grouped_skills$tools`

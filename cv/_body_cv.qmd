@@ -1,0 +1,21 @@
+{{< include _setup.qmd >}}
+
+{{< include _header.qmd >}}
+
+{{< include _summary.qmd >}}
+
+{{< include _education.qmd >}}
+
+{{< include _experience_full_list.qmd >}}
+
+{{< include _publications.qmd >}}
+
+{{< include _teaching.qmd >}}
+
+{{< include _presentations.qmd >}}
+
+{{< include _awards.qmd >}}
+
+{{< include _reviewer.qmd >}}
+
+{{< include _skills_full.qmd >}}

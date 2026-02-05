@@ -1,0 +1,23 @@
+``` {r}
+#| label: skills
+
+skill_sheet <- read_excel(path, sheet = "skills")
+
+skill_data <- skill_sheet %>%
+    separate_rows(profile, sep = ",\\s*") %>%
+    filter(.data$profile == .env$profile) %>%
+    group_by(short_group) %>%
+    arrange(order_short, .by_group = TRUE) %>%
+    ungroup()
+
+comp <- filter_and_pull(skill_data, short_group, "core_competencies", skill) %>%
+        smart_title() %>%
+        paste(collapse = " · ")
+stack <- filter_and_pull(skill_data, short_group, "tech_stack", skill) %>% 
+        smart_title() %>%
+        paste(collapse = " · ")
+```
+
+**Core Competencies**: `r comp`
+
+**Tech Stack**: `r stack`

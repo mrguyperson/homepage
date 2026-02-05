@@ -1,0 +1,11 @@
+## Professional Summary
+
+```{r}
+#| results: asis
+  txt <- read_excel(path, sheet = "summary") %>%
+    filter(.data$profile == .env$profile) %>%
+    pull(text)
+  cat(txt)
+```
+
+

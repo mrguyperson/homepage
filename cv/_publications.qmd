@@ -1,0 +1,38 @@
+## Publications
+
+```{r}
+#| results: asis
+
+pubs <- read_excel(path, sheet = "publications") %>%
+  mutate(
+    pub_date = replace_na(pub_date, today()),
+    journal = case_when(
+      is.na(journal) & category == "in_prep" ~ "In prep",
+      is.na(journal) & category == "in_review" ~ "In review",
+      .default = journal
+    )
+  ) %>%
+  arrange(desc(pub_date), category)
+
+if (pubs_mode == "selected") {
+  pubs <- pubs %>% filter(cv_selected == "yes") %>% slice_head(n = 4)
+}
+
+pubs %>%
+  rowid_to_column() %>%
+  mutate(
+    citation = if_else(
+      category == "peer_reviewed",
+      glue("{rowid}. {author} {year}. {title}. *{journal}*. {number}. DOI: [{doi}](https://doi.org/{doi})"),
+      glue("{rowid}. {author} {title}. *{journal}*.")
+    )
+  ) %>%
+  pull(citation)
+```
+
+
+```{r}
+#| results: asis
+if (pubs_mode == "selected") cat("\n\nFull publication list available [here](https://mrguyperson.quarto.pub/cv/hermann_publications.pdf) separately.\n")
+```
+

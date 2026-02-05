@@ -1,0 +1,24 @@
+
+```{r}
+#| name: contact
+
+contact_info <- read_excel(path, sheet = "contact")
+
+email <- filter_and_pull(contact_info, type, "email", value)
+city <- filter_and_pull(contact_info, type, "city", value)
+website <- filter_and_pull(contact_info, type, "website", value)
+phone <- filter_and_pull(contact_info, type, "phone", value)
+orcid <- filter_and_pull(contact_info, type, "orcid", value)
+github <- filter_and_pull(contact_info, type, "github", value)
+linkedin <- filter_and_pull(contact_info, type, "linkedin", value)
+```
+
+\begingroup
+\par\centering\textbf{Theodore W. Hermann, Ph.D.}
+\vspace{-5pt}
+\par\centering `r city` · [`r email`](mailto:`r email`) · `r phone`
+\vspace{-5pt}
+\par\centering \href{`r website`}{Portfolio} · \href{`r github`}{GitHub} · \href{`r orcid`}{ORCID} · \href{`r linkedin`}{LinkedIn}
+\vspace{-5pt}
+
+\endgroup

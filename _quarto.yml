@@ -23,8 +23,12 @@ website:
             href: cv/hermann_resume_research.qmd
           - text: Resume (Publishing)
             href: cv/hermann_resume_publishing.qmd
+          - text: Resume (Long)
+            href: cv/hermann_cv_hybrid.qmd
           - text: Full Curriculum Vitae
             href: cv/hermann_cv.qmd
+      - text: Publications
+        href: cv/hermann_publications.qmd
   repo-url: https://github.com/mrguyperson/homepage
   repo-actions: [source]
   page-footer: 

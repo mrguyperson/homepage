@@ -1,0 +1,18 @@
+```{r}
+#| name: setup
+library(tidyverse)
+library(readxl)
+library(here)
+library(glue)
+library(lubridate)
+library(purrr)
+
+source(here("functions", "functions.R"))
+path <- here("cv", "publications.xlsx")
+
+profile <- params$profile
+sections <- params$sections
+pubs_mode <- params$pubs_mode
+summary_mode <- params$summary_mode
+```
+

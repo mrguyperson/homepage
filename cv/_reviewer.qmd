@@ -1,0 +1,13 @@
+## Reviewer
+
+*Ad hoc* reviewer for:
+
+```{r}
+#| results: asis
+read_excel(path, sheet = "reviewer") %>%
+  arrange(journal) %>%
+  distinct(journal) %>%
+  mutate(journal = glue("* {journal}")) %>%
+  pull(journal)
+```
+

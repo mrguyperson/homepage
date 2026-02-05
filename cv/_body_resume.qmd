@@ -1,0 +1,13 @@
+{{< include _setup.qmd >}}
+
+{{< include _header.qmd >}}
+
+{{< include _summary.qmd >}}
+
+{{< include _skills_short.qmd >}}
+
+{{< include _experience_bullets.qmd >}}
+
+{{< include _education.qmd >}}
+
+{{< include _languages.qmd >}}

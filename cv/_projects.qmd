@@ -1,0 +1,22 @@
+```{r}
+
+projects <- read_excel(path, sheet = "projects") %>%
+    mutate(
+        project_org = glue::glue("**{project}** -- {organization}"),
+        outcomes = glue::glue("- {bullets}"))
+
+```
+
+## Selected Research Contributions
+
+```{r}
+#| results: asis
+
+for (i in seq_len(nrow(projects))) {
+    project <- projects$project_org[i]
+    outcomes <- projects$outcomes[i]
+    cat(project, "\n\n")
+    cat(outcomes, "\n\n")
+}
+
+```

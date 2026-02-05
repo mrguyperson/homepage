@@ -1,0 +1,14 @@
+## Languages & Work Eligibility
+
+``` {r}
+#| label: languages
+
+skill_sheet <- read_excel(path, sheet = "skills")
+languages <- filter_and_pull(skill_sheet, type, "language", skill) %>%
+    c("Authorized to work in Germany") %>%
+    paste(collapse = "\u00A0·\u00A0")
+
+
+```
+
+`r languages`

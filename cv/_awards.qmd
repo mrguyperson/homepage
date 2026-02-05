@@ -1,0 +1,10 @@
+## Grants, honors, and awards
+
+```{r}
+#| results: asis
+read_excel(path, sheet = "awards") %>%
+  arrange(-year) %>%
+  rowid_to_column() %>%
+  mutate(awards = glue("{rowid}. **{award}**. {status}, {year}.")) %>%
+  pull(awards)
+```

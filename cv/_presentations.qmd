@@ -1,0 +1,26 @@
+## Presentations
+
+### Conference posters
+
+```{r}
+#| results: asis
+read_excel(path, sheet = "presentations") %>%
+  filter(grepl("Poster", type)) %>%
+  arrange(-year) %>%
+  rowid_to_column() %>%
+  mutate(posters = glue("{rowid}. {names} {title}. {event}, {location}. {date}.")) %>%
+  pull(posters)
+```
+
+### Guest Lectures
+
+```{r}
+#| results: asis
+read_excel(path, sheet = "presentations") %>%
+  filter(grepl("Guest", type)) %>%
+  arrange(-year) %>%
+  rowid_to_column() %>%
+  mutate(guest_lectures = glue("{rowid}. {names} {title}. {event}, {location}. {date}.")) %>%
+  pull(guest_lectures)
+```
+

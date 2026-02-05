@@ -7,18 +7,20 @@ format:
     documentclass: scrartcl
     papersize: letter
     pdf-engine: xelatex
-    fontsize: 10pt
+    fontsize: 12pt
     geometry:
-      - margin=.78in
+      - margin=1in
       - heightrounded
     include-in-header:
-      - preamble_resume_industry.tex
+      - preamble_hybrid_cv.tex
 params:
-    profile: "industry"
+  profile: "hybrid"
+  pubs_mode: "selected"
 execute:
   warning: false
   echo: false
   message: false
   eval: true
 ---
-{{< include _body_resume.qmd >}}
+
+{{< include _body_hybrid_cv.qmd >}}

@@ -1,0 +1,15 @@
+## Teaching experience
+
+```{r}
+#| results: asis
+
+read_excel(path, sheet = "teaching") %>%
+  arrange(-year, semester) %>%
+  rowid_to_column() %>%
+  mutate(
+    teaching = glue("{rowid}. {stringr::str_to_title(semester)}, {year}. **{course}**, {institution}. {title}.")
+  ) %>%
+  pull(teaching)
+```
+
+

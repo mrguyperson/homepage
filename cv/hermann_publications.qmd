@@ -7,18 +7,22 @@ format:
     documentclass: scrartcl
     papersize: letter
     pdf-engine: xelatex
-    fontsize: 10pt
+    fontsize: 12pt
     geometry:
-      - margin=.78in
+      - margin=1in
       - heightrounded
     include-in-header:
-      - preamble_resume_industry.tex
+      - preamble_publications.tex
 params:
-    profile: "industry"
+  pubs_mode: "full"
 execute:
   warning: false
   echo: false
   message: false
   eval: true
 ---
-{{< include _body_resume.qmd >}}
+
+
+{{< include _setup.qmd >}}
+
+{{< include _publications.qmd >}}

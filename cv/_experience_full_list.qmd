@@ -1,0 +1,20 @@
+## Professional experience
+
+```{r}
+#| results: asis
+
+read_excel(path, sheet = "experience") %>%
+  select(start:organization) %>%
+  drop_na(title) %>%
+  distinct() %>%
+  mutate(end = if_else(is.na(end), today(), end)) %>%
+  arrange(desc(end)) %>%
+  rowid_to_column() %>%
+  mutate(
+    month_start = month(start, label = TRUE, abbr = TRUE),
+    month_end = month(end, label = TRUE, abbr = TRUE),
+    date_range = glue("{month_start}. {year(start)}--{month_end}. {year(end)}"),
+    jobs = glue("{rowid}. {date_range}. **{title}**, {organization}.")
+  ) %>%
+  pull(jobs)
+```

@@ -1,0 +1,40 @@
+## Professional Experience
+\par\vspace{-5pt}
+```{r}
+#| label: jobs
+
+data <- read_excel(path, sheet = "experience") %>%
+  filter(.data$profile == .env$profile) %>%
+  mutate(
+    across(start:end, as_date),
+    end = if_else(is.na(end), today(), end),
+    order_short = suppressWarnings(as.numeric(order_short))
+  ) %>%
+  arrange(order_short, desc(end)) %>%
+  mutate(
+    month_start = month(start, label = TRUE, abbr = TRUE),
+    month_end = month(end, label = TRUE, abbr = TRUE),
+    date_range = glue("{month_start} {year(start)}--{month_end} {year(end)}"),
+    job_line = glue("{date_range}: **{names_for_short}**, {organization}"),
+    task_list = map(tasks_for_short, ~ str_split(.x, "\\*")[[1]])
+  ) %>%
+  unnest(task_list) %>%
+  mutate(bullet = glue("- {task_list}"))
+
+jobs <- data %>%
+  distinct(order_short, job_line) %>%
+  arrange(order_short)
+
+```
+
+
+```{r}
+#| results: asis
+#| label: print_job_exp
+
+for (i in seq_len(nrow(jobs))) {
+  jl <- jobs$job_line[i]
+  cat(jl, "\n\n")
+  cat(paste(data %>% filter(job_line == jl) %>% pull(bullet), collapse = "\n"), "\n\n")
+}
+```
