@@ -33,6 +33,6 @@ pubs %>%
 
 ```{r}
 #| results: asis
-if (pubs_mode == "selected") cat("\n\nFull publication list available [here](https://mrguyperson.quarto.pub/cv/hermann_publications.pdf) separately.\n")
+if (pubs_mode == "selected") cat("\n\nFull publication list available [here](https://mrguyperson.quarto.pub/cv/hermann_publications.pdf).\n")
 ```
 
