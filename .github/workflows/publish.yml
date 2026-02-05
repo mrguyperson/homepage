@@ -26,10 +26,30 @@ jobs:
         uses: r-lib/actions/setup-renv@v2
       - name: Set up tinytex
         uses: r-lib/actions/setup-tinytex@v2
+      # - name: Set up Quarto
+      #   uses: quarto-dev/quarto-actions/setup@v2
+      # - name: Render and Publish 
+      #   uses: quarto-dev/quarto-actions/publish@v2
+      #   with:
+      #     target: quarto-pub
+      #     QUARTO_PUB_AUTH_TOKEN: ${{ secrets.QUARTO_PUB_AUTH_TOKEN }}
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
-      - name: Render and Publish 
-        uses: quarto-dev/quarto-actions/publish@v2
-        with:
-          target: quarto-pub
+
+      - name: Render
+        run: quarto render
+
+      - name: Publish (retry on 504s)
+        shell: bash
+        env:
           QUARTO_PUB_AUTH_TOKEN: ${{ secrets.QUARTO_PUB_AUTH_TOKEN }}
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3 4 5; do
+            echo "Publish attempt $attempt"
+            if quarto publish quarto-pub . --no-browser --no-render; then
+              exit 0
+            fi
+            sleep $((attempt * 20))
+          done
+          exit 1
