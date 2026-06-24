@@ -5,7 +5,7 @@
 
 skill_sheet <- read_excel(path, sheet = "skills")
 languages <- filter_and_pull(skill_sheet, type, "language", skill) %>%
-    c("Authorized to work in Germany") %>%
+    c("Authorized to work in the USA and Germany") %>%
     paste(collapse = "\u00A0·\u00A0")
 
 
