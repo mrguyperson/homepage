@@ -1,7 +1,8 @@
 on:
   workflow_dispatch:
   push:
-    branches: main
+    branches: 
+    - main
   schedule:
     - cron: '0 0 1 * *' # first of each month to handle any jobs with blank end date
 
